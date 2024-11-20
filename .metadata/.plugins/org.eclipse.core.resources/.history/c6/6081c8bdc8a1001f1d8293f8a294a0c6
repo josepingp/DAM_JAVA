@@ -1,0 +1,95 @@
+package javabean;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Fiesta testVoidConst1 = new Fiesta();
+		Fiesta testVoidConst2 = new Fiesta();
+		Fiesta testWithAtt1 = new Fiesta(
+										"Cumpleaños", "Calle de las Mercedes",
+										2, 5, 10, 
+										LocalDate.of(2024, 12, 9), 
+										LocalTime.of(15, 0)
+										);
+		Fiesta testWithAtt2 = new Fiesta(
+										"Despedida de soltero",
+										"Calle Peligrosa",
+										20, 15, 25, 
+										LocalDate.of(2025, 1, 22),
+										LocalTime.of(22, 30)
+										);
+
+		System.out.println("**************Comprobamos toString****************");
+
+		System.out.println(testVoidConst1.toString());
+		System.out.println(testVoidConst2.toString());
+		System.out.println(testWithAtt1.toString());
+		System.out.println(testWithAtt2.toString());
+
+		System.out.println("**************Comprobamos precioFiesta****************");
+
+		System.out.println("La fiesta testVoidConst1 cuesta " + testVoidConst1.precioFiesta());
+		System.out.println("La fiesta testVoidConst2 cuesta " + testVoidConst2.precioFiesta());
+		System.out.println("La fiesta testWithAtt1 cuesta " + testWithAtt1.precioFiesta());
+		System.out.println("La fiesta testWithAtt2 cuesta " + testWithAtt2.precioFiesta());
+
+		System.out.println("**************Comprobamos invitar sin parametros****************");
+
+		testVoidConst1.invitar();
+		testVoidConst2.invitar();
+		testWithAtt1.invitar();
+		testWithAtt2.invitar();
+
+		System.out.println("Invitados de testVoidConst1 " + testVoidConst1.getInvitados());
+		System.out.println("Invitados testVoidConst2 de " + testVoidConst2.getInvitados());
+		System.out.println("Invitados testWithAtt1 de " + testWithAtt1.getInvitados());
+		System.out.println("Invitados testWithAtt2 de " + testWithAtt2.getInvitados());
+
+		System.out.println("**************Comprobamos cancelarInvitacion sin parametros****************");
+
+		testVoidConst1.cancelarInvitacion();
+		testVoidConst2.cancelarInvitacion();
+		testWithAtt1.cancelarInvitacion();
+		testWithAtt2.cancelarInvitacion();
+
+		System.out.println("Invitados de testVoidConst1 " + testVoidConst1.getInvitados());
+		System.out.println("Invitados testVoidConst2 de " + testVoidConst2.getInvitados());
+		System.out.println("Invitados testWithAtt1 de " + testWithAtt1.getInvitados());
+		System.out.println("Invitados testWithAtt2 de " + testWithAtt2.getInvitados());
+		
+		System.out.println("**************Comprobamos invitar con parametros****************");
+
+		testVoidConst1.invitar(2000);
+		testVoidConst2.invitar(1755);
+		testWithAtt1.invitar(25);
+		testWithAtt2.invitar(-25);
+
+		System.out.println("Invitados de testVoidConst1 " + testVoidConst1.getInvitados());
+		System.out.println("Invitados testVoidConst2 de " + testVoidConst2.getInvitados());
+		System.out.println("Invitados testWithAtt1 de " + testWithAtt1.getInvitados());
+		System.out.println("Invitados testWithAtt2 de " + testWithAtt2.getInvitados());
+		
+		System.out.println("**************Comprobamos cancelarInvitacion con parametros****************");
+
+		testVoidConst1.cancelarInvitacion(2000);
+		testVoidConst2.cancelarInvitacion(1755);
+		testWithAtt1.cancelarInvitacion(25);
+		testWithAtt2.cancelarInvitacion(-25);
+
+		System.out.println("Invitados de testVoidConst1 " + testVoidConst1.getInvitados());
+		System.out.println("Invitados testVoidConst2 de " + testVoidConst2.getInvitados());
+		System.out.println("Invitados testWithAtt1 de " + testWithAtt1.getInvitados());
+		System.out.println("Invitados testWithAtt2 de " + testWithAtt2.getInvitados());
+		
+		Fiesta[] party4 = {testVoidConst1, testVoidConst2, testWithAtt1, testWithAtt2}; 
+		
+		for (int i = 0;i < party4.length; i++) {
+			System.out.println(party4[i]);
+		}
+
+	}
+
+}

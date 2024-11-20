@@ -1,0 +1,32 @@
+package javabean;
+
+import java.util.Arrays;
+
+public class Tablero {
+	private Slot[][] slots;
+	
+	public Tablero() {
+		this.slots = new Slot[3][3];
+	}
+
+	@Override
+	public String toString() {
+		return "Tablero [slots=" + Arrays.toString(slots) + "]";
+	}
+	
+	public void dibujarTablero() {
+		for (Slot[] row : slots) {
+			String lineaTablero = "";
+			System.out.println("hola");
+			for (int i = 1; i == row.length; i++) {
+				if (row[i].equals(null))
+					lineaTablero.concat(" [" + i +"] ");
+				else
+					lineaTablero.concat(" [" + row[i].printSlotToken() + "] ");
+			}
+			System.out.println(lineaTablero);
+		}
+	}
+	
+	
+}

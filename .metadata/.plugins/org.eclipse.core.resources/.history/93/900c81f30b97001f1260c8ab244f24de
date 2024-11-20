@@ -1,0 +1,10 @@
+package javabean;
+
+public class TestTablero {
+	public static void main(String[] args) {
+		Tablero tablero = new Tablero();
+		
+		System.out.println(tablero.toString());
+		System.out.println(tablero.slots[0][0]);
+	}
+}

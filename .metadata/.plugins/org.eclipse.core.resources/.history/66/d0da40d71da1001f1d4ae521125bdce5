@@ -1,0 +1,50 @@
+package javabean;
+
+public class player {
+	private String name;
+	private int number;
+	private int wins;
+	
+	public player() {
+		super();
+	}
+
+	public player(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getWins() {
+		return wins;
+	}
+
+	public void setWins(int wins) {
+		this.wins = wins;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	@Override
+	public String toString() {
+		return "player [name=" + name + ", wins=" + wins + "]";
+	}
+	
+	public void plusWin() {
+		this.wins++;
+	}
+	
+}

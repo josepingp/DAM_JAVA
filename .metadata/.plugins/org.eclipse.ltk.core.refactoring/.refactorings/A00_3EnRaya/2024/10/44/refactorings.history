@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;javabean.TestToken&apos; to &apos;TestSlot&apos;&#x0D;&#x0A;- Original project: &apos;A00_3EnRaya&apos;&#x0D;&#x0A;- Original element: &apos;javabean.TestToken&apos;&#x0D;&#x0A;- Renamed element: &apos;javabean.TestSlot&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TestToken&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;javabean{TestToken.java[TestToken" matchStrategy="1" name="TestSlot" qualified="false" references="true" similarDeclarations="false" stamp="1730326202592" textual="false" version="1.0"/>
+</session>

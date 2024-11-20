@@ -1,0 +1,18 @@
+package javabean;
+
+import java.util.Arrays;
+
+public class Tablero {
+	private Slot[][] slots;
+	
+	public Tablero() {
+		this.slots = new Slot[3][3];
+	}
+
+	@Override
+	public String toString() {
+		return "Tablero [slots=" + Arrays.toString(slots) + "]";
+	}
+	
+	
+}

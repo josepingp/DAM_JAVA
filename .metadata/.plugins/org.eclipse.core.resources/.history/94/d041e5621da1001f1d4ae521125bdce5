@@ -1,0 +1,16 @@
+package javabean;
+
+import java.util.Scanner;
+
+public class Game {
+
+	public static void main(String[] args) {
+		Tablero tablero = new Tablero();
+		
+		Scanner scanner = new Scanner(System.in)
+		System.out.println("Introduce el nombre del primer jugador");
+		
+
+	}
+
+}
