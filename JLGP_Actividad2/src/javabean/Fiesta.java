@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Fiesta {
-	//Declaro los atributos de la clase
+	/*
+	 * Declaramos los atributos de la clase
+	 */
 	private String tipoFiesta;
 	private String direccion;
 	private int bocadillos;
@@ -12,18 +14,24 @@ public class Fiesta {
 	private int invitados;
 	private LocalDate fecha;
 	private LocalTime hora;
-	//Declaramos los atributos constantes
-	//que segun he leido no tiene getters ni setters
-	private final int PRECIO_BOCADILLO = 3;
-	private final int PRECIO_BEBIDA = 2;
-	private final int PRECIO_INVITADO = 5;
+	/*
+	 * Declaramos los atributos constantes
+	 * que segun he leido no tiene getters ni setters
+	 */
+	public final int PRECIO_BOCADILLO = 3;
+	public final int PRECIO_BEBIDA = 2;
+	public final int PRECIO_INVITADO = 5;
 	
-	//Constructor sin atributos
+	/*
+	 * Constructor sin atributos
+	 */
 	public Fiesta() {
 		super();
 	}
 
-	//Constructor con atributos
+	/*
+	 * Constructor con atributos
+	 */
 	public Fiesta(
 				String tipoFiesta, String direccion, int bocadillos,
 				int bebidas, int invitados, LocalDate fecha,
@@ -39,7 +47,9 @@ public class Fiesta {
 		this.hora = hora;
 	}
 
-	//getters y setters
+	/*
+	 * getters y setters
+	 */
 	public String getTipoFiesta() {
 		return tipoFiesta;
 	}
@@ -96,7 +106,9 @@ public class Fiesta {
 		this.hora = hora;
 	}
 
-	//Sobreescribimos el metodo toString
+	/*
+	 * Sobreescribimos el metodo toString
+	 */
 	@Override
 	public String toString() {
 		return "Fiesta [tipoFiesta=" + this.tipoFiesta + 
@@ -107,27 +119,41 @@ public class Fiesta {
 				", fecha=" + this.fecha + ", hora=" + this.hora + "]";
 	}
 	
-	//metodo que añade un invitdo
+	/*
+	 * metodo que añade un invitdo
+	 */
 	public void invitar() {
 		this.invitados++;
 	}
 	
-	//metodo sobrecargado que recibe un parametro con una cantidad de invitados a sumar
+	/*
+	 * metodo sobrecargado que recibe un parametro con una cantidad de invitados a sumar
+	 */
 	public void invitar(int cantidad) {
 		this.invitados += Math.abs(cantidad);
 	}
 	
-	//metodo que resta un invitdo
+	/*
+	 * metodo que resta un invitdo
+	 */
 	public void cancelarInvitacion() {
 		this.invitados--;
+		if (this.invitados < 0)
+			this.invitados = 0;
 	}
 	
-	//metodo sobrecargado que recibe un parametro con una cantidad de invitados a restar
+	/*
+	 * metodo sobrecargado que recibe un parametro con una cantidad de invitados a restar
+	 */
 	public void cancelarInvitacion(int cantidad) {
 		this.invitados -= Math.abs(cantidad);
+		if (this.invitados < 0)
+			this.invitados = 0;
 	}
 	
-	//metodo que calcula el precio de la fiesta
+	/*
+	 * metodo que calcula el precio de la fiesta
+	 */
 	public int precioFiesta() {
 		int precioFiesta = this.invitados * PRECIO_INVITADO + this.bebidas * PRECIO_BEBIDA + this.bocadillos * PRECIO_BOCADILLO;
 		return precioFiesta;
